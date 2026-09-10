@@ -7,12 +7,12 @@ import Rodape from './componentes/Rodape/Rodape'
 function App() {
 
   return (
-    <div>
+    <>
       <Cabecalho/>
       <Principal></Principal>
       <Rodape></Rodape>
     
-    </div>
+    </>
   )
 }
 
