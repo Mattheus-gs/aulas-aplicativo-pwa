@@ -1,5 +1,16 @@
+import "./Rodape.css";
+
 function Rodape() {
-    return <header>Rodapé........</header>
+
+    const anoatual = new Date().getFullYear();
+
+  return (
+    <footer className="Rodape_root">
+      <span>
+        Copyright © {anoatual} - Todos os direitos reservados - Mattheus-Garcia
+      </span>        
+    </footer>
+  );
 }
 
-export default Rodape
+export default Rodape;

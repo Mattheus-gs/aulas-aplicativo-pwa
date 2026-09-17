@@ -1,0 +1,17 @@
+.Avatar_root{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-primaria-escura);
+}
+
+.foto{
+     width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
