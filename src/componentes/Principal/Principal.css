@@ -1,0 +1,7 @@
+.principal_root{
+    background-color:var(--cor-fundo-padrao);
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

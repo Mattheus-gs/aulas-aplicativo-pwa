@@ -2,5 +2,6 @@
    background-color: var(--cor-primaria);
    display: flex;
    align-items: center;
+   justify-content: space-around;
 
 }

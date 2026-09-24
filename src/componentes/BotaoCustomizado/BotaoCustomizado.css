@@ -1,0 +1,26 @@
+.BotaoCustomizado_root{
+    border: none;
+    padding: 8px 16px;
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-cinza);
+    border-radius: 7px;
+}
+
+.BotaoCustomizado_root:hover{
+    opacity: 0.9;
+}
+
+.BotaoCustomizado_primario{
+    background-color: var( --cor-primaria);
+}
+.BotaoCustomizado_primario:hover{
+    border: ridge var(--cor-primaria-escura);
+}
+.BotaoCustomizado_secundario{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-padra);
+   
+}
+.BotaoCustomizado_secundario:hover{
+    border: ridge var(--cor-secundaria-escura);
+}
