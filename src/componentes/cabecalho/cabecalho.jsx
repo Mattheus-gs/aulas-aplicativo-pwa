@@ -4,7 +4,7 @@ import './Cabecalho.css'
 function Cabecalho() {
 
 
-    return <header className='Cabecalho_root'>Cabeçalho........
+    return <header className='Cabecalho_root'>
     <div className='Cabecalho_root'>
         <img src="/favicon.svg" 
             style={{
@@ -13,6 +13,7 @@ function Cabecalho() {
             }}
         />
     </div>
+    Cabeçalho
     
    <Avatar 
    nome="Teus Garcia"

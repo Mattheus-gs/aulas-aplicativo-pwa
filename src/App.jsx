@@ -2,6 +2,16 @@ import './App.css'
 import Cabecalho from './componentes/cabecalho/cabecalho'
 import Principal from './componentes/Principal/Principal'
 import Rodape from './componentes/Rodape/Rodape'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import PaginaInicial from './paginas/PaginaInicial/PaginaInicial'
+
+const roteador = createBrowserRouter([
+  {
+
+    path:'',
+    element: <PaginaInicial/>,
+  },
+]);
 
 
 function App() {
@@ -9,8 +19,8 @@ function App() {
   return (
     <>
       <Cabecalho/>
-      <Principal></Principal>
-      <Rodape></Rodape>
+      <RouterProvider router={roteador}/>
+      <Rodape/>
     
     </>
   )
