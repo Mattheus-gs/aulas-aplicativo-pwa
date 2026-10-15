@@ -21,24 +21,19 @@ const produtos = [
 
 function PaginaListaProdutos() {
   return (
-    <Principal titulo="Lista da fruterinha da dona chica">
+    <Principal titulo="Lista da fruterinha da dona chica" backto="/">
       {produtos.map((item, index) => {
         return (
           <div key={index} className="PaginaListaProdutos">
             <strong>PRODUTO:</strong> {item.nome}
-
             <br />
-
             <strong>PREÇO:</strong>{" "}
             {item.preco.toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL",
             })}
-
             <br />
-
             <strong>CORES:</strong>
-
             <div className="PaginaListaProdutos_cores">
               {item.cores.map((itemCor, index) => {
                 return (
