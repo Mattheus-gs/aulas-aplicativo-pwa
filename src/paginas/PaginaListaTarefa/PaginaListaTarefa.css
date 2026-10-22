@@ -1,3 +1,14 @@
-.PaginaListaTarefa {
-  background-color: aliceblue;
+.PaginaListaTarefas_item{
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-primaria-escura);
+  justify-content: space-between;
+  border-radius: 5px;
+  color: var(--cor-texto-claro);
+  padding: 5px;
+}
+
+.PaginaListaTarefas_vazia{
+  text-align: center;
+  margin-top: 22px;
 }

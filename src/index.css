@@ -34,3 +34,8 @@ html, body, #root{
 
     --cor-cinza: #99a7bb;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
