@@ -2,7 +2,11 @@ import { useState } from "react";
 import BotaoCustomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
 import CampoCustomizado from "../../componentes/CampoCustomizado/CampoCustomizado";
 import Principal from "../../componentes/Principal/Principal";
-import { formatarComMascara, MASCARA_TELEFONE } from "../../utils/FormatarComMascara";
+import { formatarComMascara, MASCARA_CPF, MASCARA_TELEFONE } from "../../utils/FormatarComMascara";
+import { toast } from "react-toastify";
+import validarCPF from "../../utils/ValidarCPF";
+import validarEmail from "../../utils/ValidarEmail";
+import { salvarCliente } from "../../Servicos/clientes.servico";
 function PaginaCadastroCliente() {
   const [nome, setnome] = useState("");
   const [email, setemail] = useState("");
@@ -11,8 +15,30 @@ function PaginaCadastroCliente() {
   const [CPF, setCPF] = useState("");
 
   const salvar = () => {
+    if(!nome.trim()){
+      toast.warning("campo nome obrigatorio!");
+      return
+    }
+     if(email.trim() && !validarEmail(email)){
+      toast.warning("campo email invalido!");
+      return
+    }
+     if(!telefone.trim()){
+      toast.warning("campo telefone obrigatorio!");
+      return
+    }
+     if(!dataNascimento.trim()){
+      toast.warning("campo dataNascimento obrigatorio!");
+      return
+    }
+     if(CPF.trim() && !validarCPF(CPF)){
+      toast.warning("campo CPF invalido!");
+      return
+    }
+
+
     const cliente = {nome, email, telefone, dataNascimento, CPF};
-    console.log(cliente);
+    salvarCliente(cliente)
   };
 
   const puxarNome = (evento) => {
@@ -28,7 +54,7 @@ function PaginaCadastroCliente() {
     setdataNascimento(evento.target.value);
   };
   const puxarCPF = (evento) => {
-    setCPF(evento.target.value);
+    setCPF(formatarComMascara(evento.target.value,MASCARA_CPF));
   };
 
   return (
@@ -64,11 +90,11 @@ function PaginaCadastroCliente() {
       />
       <CampoCustomizado
         label="CPF"
-        type="number"
+        type="text"
         placeholder="Digite seu CPF"
         value={CPF}
         onChange={puxarCPF}
-        maxLength={11}
+        
       />
 
       <BotaoCustomizado tipo="primario" aoClicar={salvar}>Salvar</BotaoCustomizado>

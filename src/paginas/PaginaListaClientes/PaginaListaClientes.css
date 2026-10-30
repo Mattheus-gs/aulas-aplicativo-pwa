@@ -1,0 +1,12 @@
+.PaginaListaCliente_cliente{
+    
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    border: 5px ridge var(--cor-primaria-escura);
+    box-shadow: 0 0 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+}

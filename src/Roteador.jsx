@@ -3,6 +3,7 @@ import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
 import PaginaListaProdutos from "./componentes/PaginaListaProdutos/PaginaListaProdutos";
 import PaginaListaTarefa from "./paginas/PaginaListaTarefa/PaginaListaTarefa";
 import PaginaCadastroCliente from "./paginas/PaginaCadastroCliente/PaginaCadastroCliente";
+import PaginaListaClientes from "./paginas/PaginaListaClientes/PaginaListaClientes";
 
 const roteador = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const roteador = createBrowserRouter([
   {
     path: "Cadastro-cliente",
     element: <PaginaCadastroCliente />,
+  },
+  {
+    path: "Lista-clientes",
+    element: <PaginaListaClientes />,
   },
 ]);
 

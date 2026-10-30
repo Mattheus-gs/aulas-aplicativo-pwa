@@ -29,6 +29,13 @@ function PaginaInicial() {
         Cadastro cliente
       </BotaoCustomizado>
 
+      <BotaoCustomizado
+        tipo="secundario"
+        aoClicar={() => navigate("/Lista-clientes")}
+      >
+        Lista clientes
+      </BotaoCustomizado>
+
       
     </Principal>
   );
